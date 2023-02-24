@@ -14,11 +14,12 @@ Follow the instructions line-by-line.
 ==========
 2. Create a directory called mtec1003.
 ----------
+ mkdir mtec1003
 
 ==========
 3. Change your directory so that you're in mtec1003.
 ----------
-
+ cd mtec1003
 ==========
 4. Type:
 
@@ -32,7 +33,7 @@ Copy and paste the output of pwd below.
 ----------
 Here's an answer
 
-
+/Users/xc/mtec1003
 ==========
 5. Type:
 
@@ -41,9 +42,11 @@ $ ls
 
 Copy and paste the output below.
 ----------
+xc@Xs-iMac mtec1003 % mkdir animals
 
 second time.
-
+xc@Xs-iMac mtec1003 % ls
+animals
 ==========
 6. Type:
 
@@ -52,6 +55,11 @@ $ ls
 
 Copy and paste the output below.
 ----------
+xc@Xs-iMac mtec1003 % mkdir food
+xc@Xs-iMac mtec1003 % ls
+animals	food
+xc@Xs-iMac mtec1003 % 
+
 
 
 
@@ -64,7 +72,10 @@ $ ls
 Copy and paste the output below.
 ----------
 
-
+xc@Xs-iMac mtec1003 % mkdir -p foo/bar/baz/qux
+xc@Xs-iMac mtec1003 % ls
+animals	foo	food
+xc@Xs-iMac mtec1003 % 
 
 ==========
 8. Type:
@@ -75,7 +86,9 @@ $ pwd
 Copy and paste the output below.
 ----------
 
-
+xc@Xs-iMac mtec1003 % cd foo/bar/baz/qux
+xc@Xs-iMac qux % pwd
+/Users/xc/mtec1003/foo/bar/baz/qux
 
 ==========
 9. Type:
@@ -85,7 +98,10 @@ $ pwd
 
 Copy and paste the output below.
 ----------
-
+xc@Xs-iMac qux % cd ../..
+xc@Xs-iMac bar % pwd
+/Users/xc/mtec1003/foo/bar
+ 
 
 
 ==========
@@ -97,7 +113,10 @@ $ pwd
 Copy and paste the output below.
 ----------
 
-
+xc@Xs-iMac bar % cd -
+~/mtec1003/foo/bar/baz/qux
+xc@Xs-iMac qux % pwd
+/Users/xc/mtec1003/foo/bar/baz/qux
  
 ==========
 11. Type:
@@ -107,8 +126,10 @@ $ pwd
 
 Copy and paste the output below.
 ----------
-
-
+/Users/xc/mtec1003/foo/bar/baz/qux
+xc@Xs-iMac qux % cd ../../../..
+xc@Xs-iMac mtec1003 % pwd
+/Users/xc/mtec1003
 
 ==========
 12. Type:
@@ -119,8 +140,13 @@ $ ls -l
 
 Copy and paste the first two lines from the output into the space below.
 ----------
+xc@Xs-iMac mtec1003 % ls -l
+total 0
+drwxr-xr-x  2 xc  staff  64 Feb 24 15:20 animals
 
-
+xc@Xs-iMac mtec1003 % ls -l
+total 0
+drwxr-xr-x  3 xc  staff  96 Feb 24 15:22 foo
 
 ==========
 13. Type:
@@ -131,7 +157,9 @@ $ pwd
 Copy and paste the output into the space below.
 ----------
 
-
+xc@Xs-iMac mtec1003 % cd ~
+xc@Xs-iMac ~ % pwd
+/Users/xc
 
 ==========
 14. Type:
@@ -142,7 +170,8 @@ $ pwd
 Copy and paste the output into the space below.
 ----------
 
-
+xc@Xs-iMac /volumes % 
+/volumes
 
 ==========
 15. Type:
@@ -152,7 +181,9 @@ $ pwd
 
 Copy and paste the output into the space below.
 ----------
+cd: no such file or directory: /unknow_folder
 
+/volumes
 
 
 ==========
@@ -165,12 +196,12 @@ Copy and paste the output into the space below.
 ----------
 
 
-
+/Users/xc/mtec1003
 ==========
 16a. Make sure you're back in your mtec1002, which should be in your home folder.  What command would you use to find out if you're in the right folder?  Write the command below, then run it.
 ----------
 
-
+pwd
 
 ==========
 16b. If you're not in the right directory, type the following command:
@@ -193,7 +224,7 @@ lemon
 Use only one command to make all of these new directories.  Write what command you used below:
 ----------
 
-
+mkdir -p pineapple/orange/strawbery/lemon
 
 ==========
 18. Make another directory called aardvark.  
@@ -201,7 +232,7 @@ Use only one command to make all of these new directories.  Write what command y
 Write the command you used to create the directory below:
 ----------
 
-
+xc@Xs-iMac mtec1003 % mkdir aardvark
 
 ==========
 19. List the files and directories in the current directory using the long format.  
@@ -209,7 +240,9 @@ Write the command you used to create the directory below:
 What is the modified date of the aardvark directory?
 ----------
 
-
+xc@Xs-iMac mtec1003 % ls -tl 
+total 0
+drwxr-xr-x  2 xc  staff  64 Feb 24 15:54 aardvark
 
 ==========
 20. Make 3 directories nested within each other:
@@ -221,14 +254,14 @@ What is the modified date of the aardvark directory?
 What command did you use?
 ----------
 
-
+mkdir -p foo/bar/baz
 
 ==========
 21. Change your directory so that you're in the inner most directory (baz)
 
 What command did you use?
 ----------
-
+xc@Xs-iMac ~ % cd ~/mtec1003/foo/bar/baz 
 
 
 ==========
@@ -236,44 +269,46 @@ What command did you use?
 
 What command did you use?
 ----------
-
+xc@Xs-iMac baz % cd ../..
 
 ==========
 23. What command is used to delete empty directories?
 ----------
 
-
+rmdir
 
 ==========
 24. What command is used to print out your current working directory?
 ----------
 
-
+cd .
 
 ==========
 25. What flag do I pass to ls to print out all files?
 ----------
-
+-l
 
 
 ==========
 26. What's the shortcut for home directory?
 ----------
 
-
+~
 
 ==========
 27. What's a pathname?
 ----------
 
-
+As the name implies it's the name of the path. It's a location in the file system.
 
 ==========
 28. What's a directory?
 ----------
-
+This is synonymous with folder this a construct the filesystem uses to organize files. When you access a folder you're accessing a directory.
 
 
 ==========
 29. What's the *absolute* path (full path, starting at root) to your user's Downloads directory?
 ----------
+/
+
